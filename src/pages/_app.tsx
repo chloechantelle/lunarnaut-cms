@@ -1,9 +1,14 @@
 import "normalize.css";
 import { AppProps } from "next/app";
-// NOTE: Do not move the styles dir to the src.
-// They are used by the Netlify CMS preview feature.
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from '../assets/styles/mui_theme';
 import "../../public/styles/global.css";
+import '../assets/styles/_index.scss';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <ThemeProvider theme={theme}>
+    <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }

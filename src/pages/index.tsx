@@ -1,8 +1,8 @@
-import Layout from "../components/Layout";
+import Cover from "../components/cover/cover";
+import Layout from "../components/layout/layout";
 import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../components/meta/TwitterCardMeta";
-import { SocialList } from "../components/SocialList";
 
 export default function Index() {
   return (
@@ -11,14 +11,8 @@ export default function Index() {
       <OpenGraphMeta url={"/"} />
       <TwitterCardMeta url={"/"} />
       <div className="container">
-        <div>
-          <h1>
-            Hi, We're Next.js & Netlify<span className="fancy">.</span>
-          </h1>
-          <span className="handle">@nextjs-netlify-blog</span>
-          <h2>A blog template with Next.js and Netlify.</h2>
-          <SocialList />
-        </div>
+        {/* Navbar */}
+        <Cover/>
       </div>
       <style jsx>{`
         .container {
