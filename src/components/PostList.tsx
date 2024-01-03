@@ -4,6 +4,7 @@ import PostItem from "./PostItem";
 import TagLink from "./TagLink";
 import Pagination from "./Pagination";
 import { TagContent } from "../lib/tags";
+import { Grid } from "@mui/material";
 
 type Props = {
   projects: PostContent[];
@@ -16,14 +17,18 @@ type Props = {
 export default function PostList({ projects, tags, pagination }: Props) {
   return (
     <div className={"container"}>
+      <h1 className={"heading"}>
+        <a href="/projects/">All projects</a>
+      </h1>
+      <div className={"content"}>
       <div className={"projects"}>
-        <ul className={"post-list"}>
-          {projects.map((it, i) => (
-            <li key={i}>
+        <div className={"post-list"}>
+          <Grid container spacing={2}>
+            {projects.map((it, i) => (
               <PostItem post={it} />
-            </li>
-          ))}
-        </ul>
+            ))}
+          </Grid>
+        </div>
         <Pagination
           current={pagination.current}
           pages={pagination.pages}
@@ -42,11 +47,19 @@ export default function PostList({ projects, tags, pagination }: Props) {
       </ul>
       <style jsx>{`
         .container {
+          margin: 0 auto;
+          max-width: 1200px;
+          width: 100%;
+          padding: 0 1.5rem;
+          margin-top: 8rem;
+        }
+        .content {
           display: flex;
           margin: 0 auto;
           max-width: 1200px;
           width: 100%;
           padding: 0 1.5rem;
+          margin-top: 4rem;
         }
         ul {
           margin: 0;
@@ -80,6 +93,7 @@ export default function PostList({ projects, tags, pagination }: Props) {
           }
         }
       `}</style>
+    </div>
     </div>
   );
 }

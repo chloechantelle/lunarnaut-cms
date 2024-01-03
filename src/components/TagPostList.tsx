@@ -3,6 +3,7 @@ import { PostContent } from "../lib/projects";
 import { TagContent } from "../lib/tags";
 import PostItem from "./PostItem";
 import Pagination from "./Pagination";
+import TagLink from "./TagLink";
 
 type Props = {
   projects: PostContent[];
@@ -11,20 +12,19 @@ type Props = {
     current: number;
     pages: number;
   };
+  tags: TagContent[];
 };
-export default function TagPostList({ projects, tag, pagination }: Props) {
+export default function TagPostList({ projects, tag, pagination, tags }: Props) {
   return (
     <div className={"container"}>
       <h1>
-        All projects / <span>{tag.name}</span>
+        <a href="/projects/">All projects</a> / <span>{tag.name}</span>
       </h1>
-      <ul>
-        {projects.map((it, i) => (
-          <li key={i}>
-            <PostItem post={it} />
-          </li>
+      <div className="items">
+        {projects.map((it) => (
+          <PostItem post={it} />
         ))}
-      </ul>
+      </div>
       <Pagination
         current={pagination.current}
         pages={pagination.pages}
@@ -45,6 +45,7 @@ export default function TagPostList({ projects, tag, pagination }: Props) {
             padding: 0 1.5rem;
             display: flex;
             flex-direction: column;
+            margin-top: 7rem;
           }
           h1 {
             margin: 0 0 2rem;

@@ -12,6 +12,7 @@ type Props = {
   author?: string;
   image?: string;
   description?: string;
+  thumbnailUrl?: string;
 };
 export default function JsonLdMeta({
   url,
@@ -21,6 +22,7 @@ export default function JsonLdMeta({
   author,
   image,
   description,
+  thumbnailUrl
 }: Props) {
   return (
     <Head>
@@ -35,6 +37,7 @@ export default function JsonLdMeta({
           author: author,
           image: image,
           description: description,
+          thumbnailUrl: thumbnailUrl
         })}
       />
     </Head>

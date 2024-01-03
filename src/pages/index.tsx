@@ -1,4 +1,5 @@
 import About from "../components/about/about";
+import Contact from "../components/contact/contact";
 import Cover from "../components/cover/cover";
 import HighlightGD from "../components/highlight-gd/highlight-gd";
 import HighlightPD from "../components/highlight-pd/highlight-pd";
@@ -18,6 +19,7 @@ export default function Index() {
         <HighlightPD/>
         <HighlightGD/>
         <About/>
+        <Contact/>
       </div>
     </Layout>
   );

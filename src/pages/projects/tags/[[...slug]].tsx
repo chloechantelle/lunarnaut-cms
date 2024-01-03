@@ -17,8 +17,9 @@ type Props = {
     current: number;
     pages: number;
   };
+  tags: TagContent[];
 };
-export default function Index({ projects, tag, pagination, page }: Props) {
+export default function Index({ projects, tag, pagination, page, tags }: Props) {
   const url = `/projects/tags/${tag.name}` + (page ? `/${page}` : "");
   const title = tag.name;
   return (
@@ -26,7 +27,7 @@ export default function Index({ projects, tag, pagination, page }: Props) {
       <BasicMeta url={url} title={title} />
       <OpenGraphMeta url={url} title={title} />
       <TwitterCardMeta url={url} title={title} />
-      <TagPostList projects={projects} tag={tag} pagination={pagination} />
+      <TagPostList projects={projects} tag={tag} tags={tags} pagination={pagination} />
     </Layout>
   );
 }

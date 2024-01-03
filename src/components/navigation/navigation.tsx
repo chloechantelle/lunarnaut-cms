@@ -19,15 +19,17 @@ export default function Navigation() {
 
   return (
     <>
-      <AppBar position="fixed" color="secondary" className="navigation">
+      <AppBar position="fixed" color="secondary" className="navigation" elevation={0}>
         <Toolbar>
           <div className="navigation-logo">
-            <a href="/">
+            <a href="./">
               <img className="navigation-logo-image" src={logo.src} />
             </a>
           </div>
           <div className="navigation-links">
-            <Button size="large" color="inherit">Home</Button>
+            <a href="./">
+              <Button size="large" color="primary">Home</Button>
+            </a>
 
             <Button size="large"
               id="button"
@@ -35,7 +37,7 @@ export default function Navigation() {
               aria-haspopup="true"
               aria-expanded={open ? 'true' : undefined}
               onClick={handleClick}
-              color="inherit"
+              color="primary"
               endIcon={<KeyboardArrowDownIcon />}
             >
               Portfolios
@@ -50,16 +52,16 @@ export default function Navigation() {
                 'aria-labelledby': 'button',
               }}
             >
-              <a href="/projects">
+              <a href="/projects/tags/productdesign">
                 <MenuItem>Product Design</MenuItem>
               </a>
-              <a href="/projects">
+              <a href="/projects/tags/graphicdesign">
                 <MenuItem onClick={handleClose}>Graphic Design</MenuItem>
               </a>
             </Menu>
 
-            <Button size="large" color="inherit">About</Button>
-            <Button size="large" color="inherit">Contact</Button>
+            <Button size="large" color="primary">About</Button>
+            <Button size="large" color="primary">Contact</Button>
           </div>
         </Toolbar>
       </AppBar>

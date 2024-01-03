@@ -12,6 +12,7 @@ import PostLayout from "../../components/PostLayout";
 import InstagramEmbed from "react-instagram-embed";
 import YouTube from "react-youtube";
 import { TwitterTweetEmbed } from "react-twitter-embed";
+import Grid from '@mui/material/Grid';
 
 export type Props = {
   title: string;
@@ -21,9 +22,10 @@ export type Props = {
   author: string;
   description?: string;
   source: MdxRemote.Source;
+  thumbnailUrl: string;
 };
 
-const components = { InstagramEmbed, YouTube, TwitterTweetEmbed };
+const components = { InstagramEmbed, YouTube, TwitterTweetEmbed, Grid };
 const slugToPostContent = (postContents => {
   let hash = {}
   postContents.forEach(it => hash[it.slug] = it)
@@ -38,6 +40,7 @@ export default function Post({
   author,
   description = "",
   source,
+  thumbnailUrl
 }: Props) {
   const content = hydrate(source, { components })
   return (
@@ -48,6 +51,7 @@ export default function Post({
       tags={tags}
       author={author}
       description={description}
+      thumbnailUrl={thumbnailUrl}
     >
       {content}
     </PostLayout>
@@ -77,7 +81,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       description: "",
       tags: data.tags,
       author: data.author,
-      source: mdxSource
+      source: mdxSource,
+      thumbnailUrl: data.thumbnailUrl
     },
   };
 };

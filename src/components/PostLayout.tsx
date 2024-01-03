@@ -21,6 +21,7 @@ type Props = {
   author: string;
   description?: string;
   children: React.ReactNode;
+  thumbnailUrl: string;
 };
 export default function PostLayout({
   title,
@@ -30,9 +31,11 @@ export default function PostLayout({
   tags,
   description = "",
   children,
+  thumbnailUrl
 }: Props) {
   const keywords = tags.map(it => getTag(it).name);
   const authorName = getAuthor(author).name;
+
   return (
     <Layout>
       <BasicMeta
@@ -57,6 +60,7 @@ export default function PostLayout({
         keywords={keywords}
         date={date}
         author={authorName}
+        thumbnailUrl={thumbnailUrl}
         description={description}
       />
       <div className={"container"}>
@@ -66,6 +70,9 @@ export default function PostLayout({
             <div className={"metadata"}>
               <div>
                 <Date date={date} />
+              </div>
+              <div>
+              — <Author author={getAuthor(author)} />
               </div>
             </div>
           </header>
