@@ -36,23 +36,23 @@ export default function PostLayout({
   return (
     <Layout>
       <BasicMeta
-        url={`/posts/${slug}`}
+        url={`/projects/${slug}`}
         title={title}
         keywords={keywords}
         description={description}
       />
       <TwitterCardMeta
-        url={`/posts/${slug}`}
+        url={`/projects/${slug}`}
         title={title}
         description={description}
       />
       <OpenGraphMeta
-        url={`/posts/${slug}`}
+        url={`/projects/${slug}`}
         title={title}
         description={description}
       />
       <JsonLdMeta
-        url={`/posts/${slug}`}
+        url={`/projects/${slug}`}
         title={title}
         keywords={keywords}
         date={date}
@@ -67,12 +67,8 @@ export default function PostLayout({
               <div>
                 <Date date={date} />
               </div>
-              <div>
-                <Author author={getAuthor(author)} />
-              </div>
             </div>
           </header>
-          <div className={styles.content}>{children}</div>
           <ul className={"tag-list"}>
             {tags.map((it, i) => (
               <li key={i}>
@@ -80,6 +76,7 @@ export default function PostLayout({
               </li>
             ))}
           </ul>
+          <div className={styles.content}>{children}</div>
         </article>
         <footer>
           <div className={"social-list"}>
@@ -92,12 +89,13 @@ export default function PostLayout({
         {`
             .container {
               display: block;
-              max-width: 36rem;
+              max-width: 70%;
               width: 100%;
               margin: 0 auto;
               padding: 0 1.5rem;
               box-sizing: border-box;
               z-index: 0;
+              margin-top: 8rem;
             }
             .metadata div {
               display: inline-block;

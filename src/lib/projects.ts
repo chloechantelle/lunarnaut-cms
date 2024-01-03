@@ -3,7 +3,7 @@ import matter from "gray-matter";
 import path from "path";
 import yaml from "js-yaml";
 
-const postsDirectory = path.join(process.cwd(), "content/posts");
+const projectsDirectory = path.join(process.cwd(), "content/projects");
 
 export type PostContent = {
   readonly date: string;
@@ -19,13 +19,13 @@ export function fetchPostContent(): PostContent[] {
   if (postCache) {
     return postCache;
   }
-  // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames
+  // Get file names under /projects
+  const fileNames = fs.readdirSync(projectsDirectory);
+  const allProjectsData = fileNames
     .filter((it) => it.endsWith(".mdx"))
     .map((fileName) => {
       // Read markdown file as string
-      const fullPath = path.join(postsDirectory, fileName);
+      const fullPath = path.join(projectsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, "utf8");
 
       // Use gray-matter to parse the post metadata section
@@ -54,8 +54,8 @@ export function fetchPostContent(): PostContent[] {
 
       return matterData;
     });
-  // Sort posts by date
-  postCache = allPostsData.sort((a, b) => {
+  // Sort projects by date
+  postCache = allProjectsData.sort((a, b) => {
     if (a.date < b.date) {
       return 1;
     } else {
@@ -65,7 +65,7 @@ export function fetchPostContent(): PostContent[] {
   return postCache;
 }
 
-export function countPosts(tag?: string): number {
+export function countProjects(tag?: string): number {
   return fetchPostContent().filter(
     (it) => !tag || (it.tags && it.tags.includes(tag))
   ).length;

@@ -1,26 +1,70 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { AppBar, IconButton, Typography, Button, Toolbar } from "@mui/material";
+import { AppBar, Menu, MenuItem, Button, Toolbar } from "@mui/material";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import logo from "../../../public/images/logo.png";
 
 export default function Navigation() {
   const router = useRouter();
   const [active, setActive] = useState(false);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <>
-      <AppBar position="static" color="secondary" className="navigation">
+      <AppBar position="fixed" color="secondary" className="navigation">
         <Toolbar>
           <div className="navigation-logo">
-            <img src={logo.src} />
+            <a href="/">
+              <img className="navigation-logo-image" src={logo.src} />
+            </a>
           </div>
           <div className="navigation-links">
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">Portfolios</Button>
-            <Button color="inherit">About</Button>
-            <Button color="inherit">Contact</Button>
+            <Button size="large" color="inherit">Home</Button>
+
+            <Button size="large"
+              id="button"
+              aria-controls={open ? 'menu' : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? 'true' : undefined}
+              onClick={handleClick}
+              color="inherit"
+              endIcon={<KeyboardArrowDownIcon />}
+            >
+              Portfolios
+            </Button>
+
+            <Menu
+              id="menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                'aria-labelledby': 'button',
+              }}
+            >
+              <a href="/projects">
+                <MenuItem>Product Design</MenuItem>
+              </a>
+              <a href="/projects">
+                <MenuItem onClick={handleClose}>Graphic Design</MenuItem>
+              </a>
+            </Menu>
+
+            <Button size="large" color="inherit">About</Button>
+            <Button size="large" color="inherit">Contact</Button>
           </div>
         </Toolbar>
       </AppBar>
+
+      {/* TODO move to mobile view */}
       {/* <Burger active={active} onClick={() => setActive(!active)} /> */}
       {/* <div className={"container " + (active ? "active" : "")}>
         <ul>
@@ -29,9 +73,9 @@ export default function Navigation() {
           </li>
           <li>
               <a
-                href="/posts"
+                href="/projects"
                 className={
-                  router.pathname.startsWith("/posts") ? "active" : null
+                  router.pathname.startsWith("/projects") ? "active" : null
                 }
               >
                 blog

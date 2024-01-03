@@ -23,7 +23,7 @@ Or access the following demo site:
 
 - **Tagging**: organizes content by tags
 - **Author**: displays author names who write a post
-- **Pagination**: limits the number of posts per page
+- **Pagination**: limits the number of projects per page
 - **CMS**: built with CMS to allow editors modifying content with the quickest way
 - **SEO optimized**: built-in metadata like JSON-LD
 - **Shortcode**: extends content writing with React component like WordPress shortcodes

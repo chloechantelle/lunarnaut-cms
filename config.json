@@ -13,7 +13,7 @@
       "keyword": "Portfolio"
     }
   ],
-  "posts_per_page": 4,
+  "projects_per_page": 4,
   "twitter_account": "lunarnaut",
   "github_account": "chloechantelle"
 }

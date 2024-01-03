@@ -1,3 +1,21 @@
+$navigation-height: 60px;
+
+.navigation {
+    max-height: $navigation-height;
+    display: flex;
+    &-logo {
+        flex-grow: 1;
+        &-image {
+            max-height: $navigation-height;
+        }
+    }
+    &-links {
+        font-size: 20px;
+        justify-content: flex-end;
+        margin-right: 3rem;
+    }
+}
+
 // .container {
 //     width: 0;
 //   }

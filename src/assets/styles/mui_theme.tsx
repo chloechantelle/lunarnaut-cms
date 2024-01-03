@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material/styles';
+import Arame from '../fonts/Arame.ttf';
 
 export const theme = createTheme({
     palette: {
@@ -9,4 +10,18 @@ export const theme = createTheme({
         main: '#ffffff',
       },
     },
+    // Typography
+    typography: {
+      fontFamily: [
+        'Arame', 'monospace',
+      ].join(','),
+    },
+    // Components
+    components: {
+      MuiToolbar: {
+        defaultProps: {
+          disableGutters: true,
+        }
+      }
+    }
   });

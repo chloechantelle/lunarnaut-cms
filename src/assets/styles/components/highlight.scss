@@ -1,0 +1,51 @@
+.highlight {
+    padding: 6rem;
+    background-size: cover;
+    &-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-size: cover;
+        padding-bottom: 3rem;
+        color: white;
+        &--drk {
+            color: black;
+        }
+    }
+    &-items-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 80%;
+        outline: 2px solid white;
+        padding: 2rem;
+        margin-top: 2rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        margin-bottom: 0rem;
+        &--drk {
+            outline: 2px solid black;
+        }
+    }
+    &-item {
+        flex-basis: 23%;
+        width: 100%;
+        margin: 1rem;
+    }
+    &-heading {
+        font-size: 36px;
+        padding: 0;
+        margin: 0;
+        padding-top: 4rem;
+    }
+    &-sub-heading {
+        font-size: 24px;
+    }
+    &-content {
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+    }
+}

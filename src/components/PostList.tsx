@@ -1,24 +1,24 @@
 import React from "react";
-import { PostContent } from "../lib/posts";
+import { PostContent } from "../lib/projects";
 import PostItem from "./PostItem";
 import TagLink from "./TagLink";
 import Pagination from "./Pagination";
 import { TagContent } from "../lib/tags";
 
 type Props = {
-  posts: PostContent[];
+  projects: PostContent[];
   tags: TagContent[];
   pagination: {
     current: number;
     pages: number;
   };
 };
-export default function PostList({ posts, tags, pagination }: Props) {
+export default function PostList({ projects, tags, pagination }: Props) {
   return (
     <div className={"container"}>
-      <div className={"posts"}>
+      <div className={"projects"}>
         <ul className={"post-list"}>
-          {posts.map((it, i) => (
+          {projects.map((it, i) => (
             <li key={i}>
               <PostItem post={it} />
             </li>
@@ -28,8 +28,8 @@ export default function PostList({ posts, tags, pagination }: Props) {
           current={pagination.current}
           pages={pagination.pages}
           link={{
-            href: (page) => (page === 1 ? "/posts" : "/posts/page/[page]"),
-            as: (page) => (page === 1 ? null : "/posts/page/" + page),
+            href: (page) => (page === 1 ? "/projects" : "/projects/page/[page]"),
+            as: (page) => (page === 1 ? null : "/projects/page/" + page),
           }}
         />
       </div>
@@ -55,22 +55,23 @@ export default function PostList({ posts, tags, pagination }: Props) {
         li {
           list-style: none;
         }
-        .posts {
+        .projects {
           display: flex;
           flex-direction: column;
           flex: 1 1 auto;
         }
-        .posts li {
-          margin-bottom: 1.5rem;
+        .projects li {
+          margin-bottom: 3.5rem;
         }
         .post-list {
           flex: 1 0 auto;
         }
         .categories {
           display: none;
+          margin-top: 7rem;
         }
         .categories li {
-          margin-bottom: 0.75em;
+          margin-bottom: 1.75em;
         }
 
         @media (min-width: 769px) {

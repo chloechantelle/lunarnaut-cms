@@ -5,41 +5,41 @@ import OpenGraphMeta from "../../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../../components/meta/TwitterCardMeta";
 import PostList from "../../components/PostList";
 import config from "../../lib/config";
-import { countPosts, listPostContent, PostContent } from "../../lib/posts";
+import { countProjects, listPostContent, PostContent } from "../../lib/projects";
 import { listTags, TagContent } from "../../lib/tags";
 import Head from "next/head";
 
 type Props = {
-  posts: PostContent[];
+  projects: PostContent[];
   tags: TagContent[];
   pagination: {
     current: number;
     pages: number;
   };
 };
-export default function Index({ posts, tags, pagination }: Props) {
-  const url = "/posts";
-  const title = "All posts";
+export default function Index({ projects, tags, pagination }: Props) {
+  const url = "/projects";
+  const title = "All projects";
   return (
     <Layout>
       <BasicMeta url={url} title={title} />
       <OpenGraphMeta url={url} title={title} />
       <TwitterCardMeta url={url} title={title} />
-      <PostList posts={posts} tags={tags} pagination={pagination} />
+      <PostList projects={projects} tags={tags} pagination={pagination} />
     </Layout>
   );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = listPostContent(1, config.posts_per_page);
+  const projects = listPostContent(1, config.projects_per_page);
   const tags = listTags();
   const pagination = {
     current: 1,
-    pages: Math.ceil(countPosts() / config.posts_per_page),
+    pages: Math.ceil(countProjects() / config.projects_per_page),
   };
   return {
     props: {
-      posts,
+      projects,
       tags,
       pagination,
     },
