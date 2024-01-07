@@ -32,7 +32,7 @@ export default function HighlightGD() {
             </a>
           </div>
           <div className="highlight-item">
-            <a href="./projects/desert-first">
+            <a href="./projects/dessert-first">
               <img src={image4.src} />
             </a>
           </div>
