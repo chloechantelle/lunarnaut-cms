@@ -6,11 +6,14 @@
     width: 100%;
     background-image: url('../../../../public/images/cover.png') fixed cover;
     &-image {
-        flex: 0 0 50%;
+        flex: 0 0 30%;
         text-align: center;
+        img {
+            max-height: 600px;
+        }
     }
     &-content {
-        flex: 0 0 50%;
+        flex: 0 0 70%;
         // todo calc minus the header height
         align-items: center;
         justify-items: center;

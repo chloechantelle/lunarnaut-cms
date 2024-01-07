@@ -12,6 +12,7 @@ import { SocialList } from "./SocialList";
 import TagButton from "./TagButton";
 import { getAuthor } from "../lib/authors";
 import { getTag } from "../lib/tags";
+import darkBg from "../../public/images/dark-bg.jpg";
 
 type Props = {
   title: string;
@@ -29,7 +30,7 @@ export default function PostLayout({
   slug,
   author,
   tags,
-  description = "",
+  description,
   children,
   thumbnailUrl
 }: Props) {
@@ -65,24 +66,25 @@ export default function PostLayout({
       />
       <div className={"container"}>
         <article>
-          <header>
+          <header style={{ backgroundImage: `url(${darkBg.src})` }}>
             <h1>{title}</h1>
-            <div className={"metadata"}>
+            <p className={"description centered"}>{description}</p>
+            {/* <div className={"metadata"}>
               <div>
                 <Date date={date} />
               </div>
               <div>
               — <Author author={getAuthor(author)} />
               </div>
-            </div>
+            </div> */}
           </header>
-          <ul className={"tag-list"}>
+          {/* <ul className={"tag-list"}>
             {tags.map((it, i) => (
               <li key={i}>
                 <TagButton tag={getTag(it)} />
               </li>
             ))}
-          </ul>
+          </ul> */}
           <div className={styles.content}>{children}</div>
         </article>
         <footer>
@@ -96,13 +98,18 @@ export default function PostLayout({
         {`
             .container {
               display: block;
-              max-width: 70%;
+              max-width: 80%;
               width: 100%;
               margin: 0 auto;
-              padding: 0 1.5rem;
               box-sizing: border-box;
               z-index: 0;
-              margin-top: 8rem;
+              margin-top: 3rem;
+              background: whitesmoke;
+            }
+            .description {
+              font-size: 20px;
+              font-family: 'Roboto', sans-serif;
+              margin: 0 auto;
             }
             .metadata div {
               display: inline-block;
@@ -111,9 +118,23 @@ export default function PostLayout({
             article {
               flex: 1 0 auto;
             }
+            header {
+              width: 100%;
+              text-align: center;
+              padding: 4rem 0;
+              background: black;
+              color: white;
+            }
             h1 {
-              margin: 0 0 0.5rem;
-              font-size: 2.25rem;
+              font-size: 87px;
+              margin: 1rem 0;
+            }
+            h2 {
+              font-size: 47px;
+              margin: 1rem 0;
+            }
+            p {
+              font-size: 24px;
             }
             .tag-list {
               list-style: none;

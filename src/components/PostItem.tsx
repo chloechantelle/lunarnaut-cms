@@ -8,8 +8,7 @@ type Props = {
 };
 export default function PostItem({ post }: Props) {
   return (
-    <Paper square variant="outlined" sx={{padding: 3, margin: 2}} >
-      <Grid item xs={3} className="item">
+      <Grid item xs={3} className="item" sx={{padding: 3, margin: 2}}>
         <a href={"/projects/" + post.slug}>
           <Date date={parseISO(post.date)} />
           <Typography variant="h5" component="h5" noWrap>
@@ -22,8 +21,8 @@ export default function PostItem({ post }: Props) {
               margin: 0 1rem;
             }
             a {
-              color: #222;
               display: inline-block;
+              color: #000;
             }
             h2 {
               margin: 0;
@@ -33,6 +32,5 @@ export default function PostItem({ post }: Props) {
           </style>
         </a>
       </Grid>
-    </Paper>
   );
 }

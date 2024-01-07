@@ -5,6 +5,7 @@ import TagLink from "./TagLink";
 import Pagination from "./Pagination";
 import { TagContent } from "../lib/tags";
 import { Grid } from "@mui/material";
+import lightBg from "../../public/images/light-bg.png";
 
 type Props = {
   projects: PostContent[];
@@ -16,6 +17,7 @@ type Props = {
 };
 export default function PostList({ projects, tags, pagination }: Props) {
   return (
+    <div className={"background"} style={{ backgroundImage: `url(${lightBg.src})`, height: `100vh` }}>
     <div className={"container"}>
       <h1 className={"heading"}>
         <a href="/projects/">All projects</a>
@@ -46,6 +48,15 @@ export default function PostList({ projects, tags, pagination }: Props) {
         ))}
       </ul>
       <style jsx>{`
+        .background {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        }
         .container {
           margin: 0 auto;
           max-width: 1200px;
@@ -93,6 +104,7 @@ export default function PostList({ projects, tags, pagination }: Props) {
           }
         }
       `}</style>
+    </div>
     </div>
     </div>
   );

@@ -10,7 +10,12 @@
         background-size: cover;
         padding-bottom: 3rem;
         color: white;
+        box-sizing: border-box;
+        box-shadow: 0 0 0 3px #fefefe inset;
+        border: 10px solid #000;
         &--drk {
+            box-shadow: 0 0 0 3px #000 inset;
+            border: 10px solid #fefefe;
             color: black;
         }
     }
@@ -34,6 +39,11 @@
         flex-basis: 23%;
         width: 100%;
         margin: 1rem;
+        filter: grayscale(100);
+        transition: ease-in-out .2s;
+        &:hover {
+            filter: grayscale(0);
+        }
     }
     &-heading {
         font-size: 36px;
@@ -41,7 +51,7 @@
         margin: 0;
         padding-top: 4rem;
     }
-    &-sub-heading {
+    &-subheading {
         font-size: 24px;
     }
     &-content {

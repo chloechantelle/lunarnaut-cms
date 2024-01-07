@@ -1,12 +1,10 @@
-$navigation-height: 60px;
-
 .navigation {
-    max-height: $navigation-height;
+    max-height: 80px;
     display: flex;
     &-logo {
         flex-grow: 1;
         &-image {
-            max-height: $navigation-height;
+            max-height: 83px;
         }
     }
     &-links {

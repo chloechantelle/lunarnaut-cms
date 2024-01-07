@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import { ArrowForward } from '@mui/icons-material';
-import darkBg from "../../../public/images/dark-content-bg.png";
-import image1 from "../../../public/images/previews/pd_1_b&w.png";
+import darkBg from "../../../public/images/dark-content-bg.jpg";
+import image1 from "../../../public/images/previews/pd_1.png";
 import lightBg from "../../../public/images/light-bg.png";
 
 export default function HighlightPD() {
@@ -12,7 +12,9 @@ export default function HighlightPD() {
         <p className="highlight-subheading">Product Design</p>
         <div className="highlight-items-container">
           <div className="highlight-item">
-            <img src={image1.src} />
+            <a href="./projects/terra-biking">
+              <img src={image1.src} />
+            </a>
           </div>
           <div className="highlight-item">
             <img src={image1.src} />

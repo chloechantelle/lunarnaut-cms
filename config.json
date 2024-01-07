@@ -1,5 +1,5 @@
 {
-  "base_url": "https://lunarnaut-cms.netlify.app",
+  "base_url": "https://lunarnaut.co",
   "site_title": "Lunarnaut",
   "site_description": "Digital Designer Portfolio",
   "site_keywords": [
@@ -14,6 +14,6 @@
     }
   ],
   "projects_per_page": 4,
-  "twitter_account": "lunarnaut",
+  "twitter_account": "lunarnautco",
   "github_account": "chloechantelle"
 }

@@ -1,7 +1,7 @@
 export default function Copyright() {
   return (
     <>
-      <p>&copy; 2024 </p>
+      <p>&copy; 2024 Lunarnaut </p>
       <style jsx>
         {`
           p {

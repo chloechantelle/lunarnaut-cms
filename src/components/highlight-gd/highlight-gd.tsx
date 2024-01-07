@@ -1,8 +1,8 @@
 import { Button } from "@mui/material";
 import { ArrowForward } from '@mui/icons-material';
-import lightBg from "../../../public/images/light-content-bg.png";
-import image1 from "../../../public/images/previews/gd_1_b&w.png";
-import darkBg from "../../../public/images/dark-bg.png";
+import lightBg from "../../../public/images/light-content-bg.jpg";
+import image1 from "../../../public/images/previews/gd_1.png";
+import darkBg from "../../../public/images/dark-bg.jpg";
 
 export default function HighlightGD() {
   return (

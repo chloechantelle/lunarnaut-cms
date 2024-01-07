@@ -3,7 +3,7 @@ import { PostContent } from "../lib/projects";
 import { TagContent } from "../lib/tags";
 import PostItem from "./PostItem";
 import Pagination from "./Pagination";
-import TagLink from "./TagLink";
+import lightBg from "../../public/images/light-bg.png";
 
 type Props = {
   projects: PostContent[];
@@ -16,28 +16,38 @@ type Props = {
 };
 export default function TagPostList({ projects, tag, pagination, tags }: Props) {
   return (
-    <div className={"container"}>
-      <h1>
-        <a href="/projects/">All projects</a> / <span>{tag.name}</span>
-      </h1>
-      <div className="items">
-        {projects.map((it) => (
-          <PostItem post={it} />
-        ))}
-      </div>
-      <Pagination
-        current={pagination.current}
-        pages={pagination.pages}
-        link={{
-          href: () => "/projects/tags/[[...slug]]",
-          as: (page) =>
-            page === 1
-              ? "/projects/tags/" + tag.slug
-              : `/projects/tags/${tag.slug}/${page}`,
-        }}
-      />
-      <style jsx>
-        {`
+    <div className={"background"} style={{ backgroundImage: `url(${lightBg.src})`, height: `100vh` }}>
+      <div className={"container"}>
+        <h1>
+          <a href="/projects/">All projects</a> / <span>{tag.name}</span>
+        </h1>
+        <div className="items">
+          {projects.map((it) => (
+            <PostItem post={it} />
+          ))}
+        </div>
+        <Pagination
+          current={pagination.current}
+          pages={pagination.pages}
+          link={{
+            href: () => "/projects/tags/[[...slug]]",
+            as: (page) =>
+              page === 1
+                ? "/projects/tags/" + tag.slug
+                : `/projects/tags/${tag.slug}/${page}`,
+          }}
+        />
+        <style jsx>
+          {`
+          .background {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            }
           .container {
             margin: 0 auto;
             max-width: 1200px;
@@ -45,10 +55,9 @@ export default function TagPostList({ projects, tag, pagination, tags }: Props) 
             padding: 0 1.5rem;
             display: flex;
             flex-direction: column;
-            margin-top: 7rem;
           }
           h1 {
-            margin: 0 0 2rem;
+            margin: 10rem 10rem 2rem;
             padding: 0;
             font-weight: 100;
             font-size: 1.75rem;
@@ -74,7 +83,8 @@ export default function TagPostList({ projects, tag, pagination, tags }: Props) 
             }
           }
         `}
-      </style>
+        </style>
+      </div>
     </div>
   );
 }

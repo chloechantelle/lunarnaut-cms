@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { AppBar, Menu, MenuItem, Button, Toolbar } from "@mui/material";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import logo from "../../../public/images/logo.png";
+import logo from "../../../public/images/lunarnautheader.jpg";
 
 export default function Navigation() {
   const router = useRouter();
@@ -22,12 +22,12 @@ export default function Navigation() {
       <AppBar position="fixed" color="secondary" className="navigation" elevation={0}>
         <Toolbar>
           <div className="navigation-logo">
-            <a href="./">
+            <a href="../../">
               <img className="navigation-logo-image" src={logo.src} />
             </a>
           </div>
           <div className="navigation-links">
-            <a href="./">
+            <a href="../../">
               <Button size="large" color="primary">Home</Button>
             </a>
 
@@ -60,8 +60,13 @@ export default function Navigation() {
               </a>
             </Menu>
 
-            <Button size="large" color="primary">About</Button>
-            <Button size="large" color="primary">Contact</Button>
+            <a href="../../#about">
+              <Button size="large" color="primary">About</Button>
+            </a>
+
+            <a href="../../#contact">
+              <Button size="large" color="primary">Contact</Button>
+            </a>
           </div>
         </Toolbar>
       </AppBar>

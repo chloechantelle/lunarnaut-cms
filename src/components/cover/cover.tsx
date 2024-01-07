@@ -1,13 +1,13 @@
 import { Button } from "@mui/material";
 import { ArrowForward } from '@mui/icons-material';
 import cover from "../../../public/images/cover.png";
-import astronaut from "../../../public/images/astronaut.png";
+import lunarnaut from "../../../public/images/lunarnaut.gif";
 
 export default function Cover() {
   return (
     <div className="cover" style={{ backgroundImage: `url(${cover.src})` }}>
       <div className="cover-image">
-        <img src={astronaut.src} />
+        <img src={lunarnaut.src} />
       </div>
       <div className="cover-content">
 

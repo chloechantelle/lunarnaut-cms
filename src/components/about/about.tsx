@@ -4,7 +4,7 @@ import cover from "../../../public/images/about-bg.png";
 
 export default function About() {
   return (
-    <div className="about" style={{ backgroundImage: `url(${cover.src})` }}>
+    <div className="about" id="about" style={{ backgroundImage: `url(${cover.src})` }}>
       <div className="about-content">
         <h1 className="about-content-heading">Hello, I'm Lachlan</h1>
         <p className="about-content-body">I'm an Artistic and creative person driven by my passion for Digital Artistry, Graphic Design and Animation.</p>

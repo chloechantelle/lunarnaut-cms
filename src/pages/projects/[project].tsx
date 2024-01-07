@@ -38,7 +38,7 @@ export default function Post({
   slug,
   tags,
   author,
-  description = "",
+  description,
   source,
   thumbnailUrl
 }: Props) {
@@ -78,7 +78,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       title: data.title,
       dateString: data.date,
       slug: data.slug,
-      description: "",
+      description: data.description,
       tags: data.tags,
       author: data.author,
       source: mdxSource,
