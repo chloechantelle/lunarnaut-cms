@@ -167,6 +167,6 @@
     }
 
     .content h2::before {
-        display: block;
+        display: none;
     }
 }

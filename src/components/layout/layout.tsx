@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Navigation from "../navigation/navigation";
+import Copyright from "../../components/Copyright";
+import { SocialList } from "../../components/SocialList";
 
 type Props = {
   children: React.ReactNode;
@@ -18,6 +20,12 @@ export default function Layout({ children }: Props) {
         <Navigation />
       </nav>
       <main>{children}</main>
+      <footer>
+        <div className={"social-list"}>
+          <SocialList />
+        </div>
+        <Copyright />
+      </footer>
     </div>
   );
 }

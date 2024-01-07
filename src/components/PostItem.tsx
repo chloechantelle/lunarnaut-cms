@@ -8,20 +8,23 @@ type Props = {
 };
 export default function PostItem({ post }: Props) {
   return (
-      <Grid item xs={3} className="item" sx={{padding: 3, margin: 2}}>
-        <a href={"/projects/" + post.slug}>
-          <Date date={parseISO(post.date)} />
-          <Typography variant="h5" component="h5" noWrap>
-            {post.title}
-          </Typography>
-          <img src={post.thumbnailUrl} />
-          <style jsx>
-            {`
+    <Grid item xs={3} className={"item"} sx={{ padding: 3, margin: 0, flex: `0 0 33%`, width: `100%` }}>
+      <a href={"/projects/" + post.slug}>
+        <Date date={parseISO(post.date)} />
+        <Typography variant="h5" component="h5" noWrap>
+          {post.title}
+        </Typography>
+        <img src={post.thumbnailUrl} />
+        <style jsx>
+          {`
             .item {
               margin: 0 1rem;
             }
+            img {
+              width: 100%;
+            }
             a {
-              display: inline-block;
+              display: block;
               color: #000;
             }
             h2 {
@@ -29,8 +32,8 @@ export default function PostItem({ post }: Props) {
               font-weight: 500;
             }
           `}
-          </style>
-        </a>
-      </Grid>
+        </style>
+      </a>
+    </Grid>
   );
 }

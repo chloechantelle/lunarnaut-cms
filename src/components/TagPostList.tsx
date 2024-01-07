@@ -26,7 +26,7 @@ export default function TagPostList({ projects, tag, pagination, tags }: Props) 
             <PostItem post={it} />
           ))}
         </div>
-        <Pagination
+        {/* <Pagination
           current={pagination.current}
           pages={pagination.pages}
           link={{
@@ -36,7 +36,7 @@ export default function TagPostList({ projects, tag, pagination, tags }: Props) 
                 ? "/projects/tags/" + tag.slug
                 : `/projects/tags/${tag.slug}/${page}`,
           }}
-        />
+        /> */}
         <style jsx>
           {`
           .background {
@@ -50,11 +50,15 @@ export default function TagPostList({ projects, tag, pagination, tags }: Props) 
             }
           .container {
             margin: 0 auto;
-            max-width: 1200px;
+            max-width: 80%;
             width: 100%;
             padding: 0 1.5rem;
             display: flex;
             flex-direction: column;
+          }
+          .items {
+            display: flex;
+            flex-wrap: wrap;
           }
           h1 {
             margin: 10rem 10rem 2rem;

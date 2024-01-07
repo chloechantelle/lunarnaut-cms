@@ -16,6 +16,7 @@ export function SocialList({}) {
       <style jsx>{`
         div {
           text-align: center;
+          padding-top: 1rem;
         }
         a {
           display: inline-block;

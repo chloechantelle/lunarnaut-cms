@@ -41,6 +41,9 @@
         margin: 1rem;
         filter: grayscale(100);
         transition: ease-in-out .2s;
+        image {
+            width: 100%;
+        }
         &:hover {
             filter: grayscale(0);
         }
