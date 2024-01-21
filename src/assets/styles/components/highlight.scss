@@ -39,10 +39,13 @@
         flex-basis: 23%;
         width: 100%;
         margin: 1rem;
+        text-align: center;
+        border: 1px solid white;
         filter: grayscale(100);
         transition: ease-in-out .2s;
-        image {
+        img {
             width: 100%;
+            max-height: 200px;
         }
         &:hover {
             filter: grayscale(0);
