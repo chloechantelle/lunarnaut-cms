@@ -54,7 +54,6 @@ export default function PostList({ projects, tags, pagination }: Props) {
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 100vh;
         background-size: cover;
         }
         .container {
