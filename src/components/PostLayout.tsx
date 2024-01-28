@@ -93,7 +93,6 @@ export default function PostLayout({
               box-sizing: border-box;
               z-index: 0;
               margin-top: 3rem;
-              background: whitesmoke;
             }
             .description {
               font-size: 20px;
