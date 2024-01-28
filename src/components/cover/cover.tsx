@@ -2,13 +2,21 @@ import { Button } from "@mui/material";
 import { ArrowForward } from '@mui/icons-material';
 import cover from "../../../public/images/cover.png";
 import lunarnaut from "../../../public/images/lunarnaut.gif";
+import circle from "../../../public/images/circle.png";
 
 export default function Cover() {
   return (
     <div className="cover" style={{ backgroundImage: `url(${cover.src})` }}>
+
+      <div className="cover-animation">
+        <div className="cover-animation-image cover-animation-l" style={{ backgroundImage: `url(${circle.src})` }}></div>
+        <div className="cover-animation-image cover-animation-r" style={{ backgroundImage: `url(${circle.src})` }}></div>
+      </div>
+
       <div className="cover-image">
         <img src={lunarnaut.src} />
       </div>
+
       <div className="cover-content">
 
         <div className="cover-content-heading">

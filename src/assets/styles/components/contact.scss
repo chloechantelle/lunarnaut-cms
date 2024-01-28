@@ -21,3 +21,14 @@
         }
     }
 }
+
+// Mobile Layout
+@media (max-width: 769px) {
+    .contact {
+        &-content {
+            flex: 0 0 85%;
+            padding: 0 2rem;
+
+        }
+    }
+}

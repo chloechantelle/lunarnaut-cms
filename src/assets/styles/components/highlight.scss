@@ -42,7 +42,7 @@
         text-align: center;
         border: 1px solid white;
         filter: grayscale(100);
-        transition: ease-in-out .2s;
+        transition: ease-in-out 0.2s;
         img {
             width: 100%;
             max-height: 200px;
@@ -63,5 +63,24 @@
     &-content {
         font-family: 'Roboto', sans-serif;
         font-size: 24px;
+        padding: 0 1rem;
+    }
+}
+
+// Mobile Layout
+@media (max-width: 769px) {
+    .highlight {
+        padding: 6rem 0;
+        &-items-container {
+            display: block;
+            max-width: 90%;
+            margin: 0;
+            padding: 0;
+            outline: 0;
+        }
+        &-content {
+            padding: 0 2rem;
+            text-align: center;
+        }
     }
 }

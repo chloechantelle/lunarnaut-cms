@@ -1,14 +1,15 @@
 .about-page {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    height: 100vh;
     // todo calc minus the header height
     width: 100%;
     background: black;
     &-header {
         border: 15px solid black;
         margin-top: 5rem;
+        img {
+            width: 100%;
+        }
     }
     &-image {
         flex: 0 0 50%;
@@ -17,7 +18,7 @@
         }
     }
     &-content {
-        flex: 0 0 50%;
+        flex: 0 0 45%;
         padding: 0 2rem;
         color: white;
         &-heading {
@@ -26,6 +27,19 @@
         &-body {
             font-size: 18px;
             font-family: 'Roboto', sans-serif;
+        }
+    }
+}
+
+// Mobile Layout
+@media (max-width: 769px) {
+    .about-page {
+        flex-direction: column-reverse;
+        &-image {
+            flex: 0 0 95%;
+        }
+        &-content {
+            flex: 0 0 95%;
         }
     }
 }
