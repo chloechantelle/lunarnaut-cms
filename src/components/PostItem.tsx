@@ -21,7 +21,7 @@ export default function PostItem({ post }: Props) {
               margin: 0 1rem;
             }
             img {
-              width: 100%;
+              width: 300px;
             }
             a {
               display: block;

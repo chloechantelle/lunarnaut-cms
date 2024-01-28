@@ -16,7 +16,7 @@ type Props = {
 };
 export default function TagPostList({ projects, tag, pagination, tags }: Props) {
   return (
-    <div className={"background"} style={{ backgroundImage: `url(${lightBg.src})`, height: `100vh` }}>
+    <div className={"background"} style={{ backgroundImage: `url(${lightBg.src})`}}>
       <div className={"container"}>
         <h1>
           <a href="/projects/">All projects</a> / <span>{tag.name}</span>
@@ -83,6 +83,11 @@ export default function TagPostList({ projects, tag, pagination, tags }: Props) 
           @media (min-width: 769px) {
             h1 {
               font-size: 2rem;
+            }
+          }
+          @media (max-width: 769px) {
+            h1 {
+              margin: 10rem 3rem 2rem;
             }
           }
         `}

@@ -17,7 +17,7 @@ type Props = {
 };
 export default function PostList({ projects, tags, pagination }: Props) {
   return (
-    <div className={"background"} style={{ backgroundImage: `url(${lightBg.src})`, height: `100vh` }}>
+    <div className={"background"} style={{ backgroundImage: `url(${lightBg.src})` }}>
     <div className={"container"}>
       <h1 className={"heading"}>
         <a href="/projects/">All projects</a>

@@ -145,6 +145,11 @@ export default function PostLayout({
                 flex-direction: column;
               }
             }
+            @media (max-width: 769px) {
+              .container {
+                max-width: 100%;
+              }
+            }
           `}
       </style>
       <style global jsx>

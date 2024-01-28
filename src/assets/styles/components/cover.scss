@@ -12,20 +12,21 @@
         overflow-x: hidden;
         &-image {
             position: absolute;
-            top: 32%;
-            width: 450px;
-            height: 450px;
+            top: 30%;
+            width: 500px;
+            height: 500px;
             animation-name: spin;
             animation-duration: 60s;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
             background-size: cover;
+            opacity: 0.5;
         }
         &-l {
-            left: -225px;
+            left: -250px;
         }
         &-r {
-            right: -225px;
+            right: -250px;
         }
     }
     &-image {
