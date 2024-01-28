@@ -27,11 +27,6 @@ export default function HighlightPD() {
             </a>
           </div>
           <div className="highlight-item">
-          <a href="./projects/angelo-winery">
-              <img src={image3.src} />
-            </a>
-          </div>
-          <div className="highlight-item">
           <a href="./projects/corvine-design">
               <img src={image4.src} />
             </a>

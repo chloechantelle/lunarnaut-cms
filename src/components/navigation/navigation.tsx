@@ -60,11 +60,11 @@ export default function Navigation() {
               </a>
             </Menu>
 
-            <a href="../../#about">
+            <a href="../../about">
               <Button size="large" color="primary">About</Button>
             </a>
 
-            <a href="../../#contact">
+            <a href="../../contact">
               <Button size="large" color="primary">Contact</Button>
             </a>
           </div>
