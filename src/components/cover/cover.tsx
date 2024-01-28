@@ -33,7 +33,7 @@ export default function Cover() {
           <h2 className="cover-content-subheading-text">I specialize in Graphic Design & Product Design</h2>
         </div>
 
-        <a href="/projects">
+        <a href="#highlight">
           <Button
             variant="outlined"
             color="secondary"

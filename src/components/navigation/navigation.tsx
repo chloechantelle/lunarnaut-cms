@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { AppBar, Menu, MenuItem, Button, Toolbar } from "@mui/material";
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { KeyboardArrowDown, RocketLaunchOutlined, PublicOutlined, SmartToyOutlined, SatelliteAltOutlined } from '@mui/icons-material';
 import logo from "../../../public/images/lunarnautheader.jpg";
 
 export default function Navigation() {
@@ -28,7 +28,7 @@ export default function Navigation() {
           </div>
           <div className="navigation-links">
             <a href="../../">
-              <Button size="large" color="primary">Home</Button>
+              <Button startIcon={<PublicOutlined />} size="large" color="primary">Home</Button>
             </a>
 
             <Button size="large"
@@ -38,7 +38,8 @@ export default function Navigation() {
               aria-expanded={open ? 'true' : undefined}
               onClick={handleClick}
               color="primary"
-              endIcon={<KeyboardArrowDownIcon />}
+              startIcon={<RocketLaunchOutlined />}
+              endIcon={<KeyboardArrowDown />}
             >
               Portfolios
             </Button>
@@ -53,7 +54,7 @@ export default function Navigation() {
               }}
             >
               <a href="/projects/tags/productdesign">
-                <MenuItem>Product Design</MenuItem>
+                <MenuItem onClick={handleClose}>Product Design</MenuItem>
               </a>
               <a href="/projects/tags/graphicdesign">
                 <MenuItem onClick={handleClose}>Graphic Design</MenuItem>
@@ -61,11 +62,11 @@ export default function Navigation() {
             </Menu>
 
             <a href="../../about">
-              <Button size="large" color="primary">About</Button>
+              <Button startIcon={<SmartToyOutlined />} size="large" color="primary">About</Button>
             </a>
 
             <a href="../../contact">
-              <Button size="large" color="primary">Contact</Button>
+              <Button startIcon={<SatelliteAltOutlined />} size="large" color="primary">Contact</Button>
             </a>
           </div>
         </Toolbar>

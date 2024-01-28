@@ -8,7 +8,7 @@ import { Public } from '@mui/icons-material';
 import { Brush } from '@mui/icons-material';
 import { Palette } from '@mui/icons-material';
 
-export default function Index() {
+export default function About() {
   return (
     <Layout>
       <BasicMeta url={"/"} />

@@ -14,6 +14,39 @@
     }
 }
 
+// Mobile Layout
+@media (max-width: 1200px) {
+    .navigation-links {
+        display: none;
+    }
+}
+
+// Mobile Layout
+@media (min-width: 1200px) {
+    .bottom-nav {
+        display: none;
+    }
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    color: black;
+    button {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-content: center;
+        justify-items: center;
+        justify-self: center;
+        align-items: center;
+        align-self: center;
+    }
+}
+
 // .container {
 //     width: 0;
 //   }

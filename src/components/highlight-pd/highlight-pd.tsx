@@ -11,7 +11,7 @@ import lightBg from "../../../public/images/light-bg.png";
 
 export default function HighlightPD() {
   return (
-    <div className="highlight" style={{ backgroundImage: `url(${lightBg.src})` }}>
+    <div id="highlight" className="highlight" style={{ backgroundImage: `url(${lightBg.src})` }}>
       <div className="highlight-container" style={{ backgroundImage: `url(${darkBg.src})` }}>
         <h2 className="highlight-heading">Highlighted Works</h2>
         <p className="highlight-subheading">Product Design</p>

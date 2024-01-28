@@ -1,0 +1,49 @@
+.contact-page {
+    display: flex;
+    align-items: center;
+    // todo calc minus the header height
+    width: 100%;
+    background: white;
+    &-header {
+        border: 15px solid white;
+        margin-top: 5rem;
+        img {
+            width: 100%;
+        }
+    }
+    &-image {
+        display: flex;
+        justify-content: right;
+        flex: 0 0 50%;
+        img {
+            width: 100%;
+            max-width: 600px;
+        }
+    }
+    &-content {
+        flex: 0 0 45%;
+        padding: 0 2rem;
+        max-width: 600px;
+        color: black;
+        &-heading {
+            font-size: 50px;
+        }
+        &-body {
+            font-size: 24px;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+}
+
+// Mobile Layout
+@media (max-width: 769px) {
+    .contact-page {
+        flex-direction: column-reverse;
+        &-image {
+            flex: 0 0 95%;
+        }
+        &-content {
+            flex: 0 0 95%;
+        }
+    }
+}
