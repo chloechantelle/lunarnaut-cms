@@ -21,13 +21,12 @@ footer {
     flex-direction: column;
     justify-content: center;
     width: 60%;
-    padding: 2rem 0 7rem 0;
+    padding: 2rem 0 2rem 0;
 }
 
 @media (max-width: 1090px) {
     .centered {
         width: 90%;
-        padding: 2rem 0 2rem 0;
     }
     .content-container {
         display: block;
