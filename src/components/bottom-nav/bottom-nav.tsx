@@ -13,10 +13,10 @@ export default function BottomNav() {
         </a>
 
         <a href="/projects/tags/productdesign">
-          <Button startIcon={<RocketLaunchOutlined />} size="large" color="primary">Product Design</Button>
+          <Button startIcon={<RocketLaunchOutlined />} size="large" color="primary">UI/UX</Button>
         </a>
         <a href="/projects/tags/graphicdesign">
-          <Button startIcon={<AutoAwesomeOutlined />} size="large" color="primary">Graphic Design</Button>
+          <Button startIcon={<AutoAwesomeOutlined />} size="large" color="primary">Graphic</Button>
         </a>
         <a href="../../about">
           <Button startIcon={<SmartToyOutlined />} size="large" color="primary">About</Button>
