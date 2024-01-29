@@ -114,7 +114,7 @@ export default function PostLayout({
               color: white;
             }
             h1 {
-              font-size: 87px;
+              font-size: 74px;
               margin: 1rem 0;
             }
             h2 {
