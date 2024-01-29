@@ -29,13 +29,13 @@ footer {
         width: 90%;
     }
     .content-container {
-        display: block;
-        width: 100%;
-        padding-bottom: 2rem;
+        display: block !important;
+        width: 100% !important;
+        padding-bottom: 2rem !important;
     }
     .content-body {
-        display: block;
-        max-width: 100%;
+        display: block !important;
+        max-width: 100% !important;
     }
 }
 
