@@ -5,8 +5,8 @@ import image1 from "../../../public/images/previews/gd_1.png";
 import image2 from "../../../public/images/previews/gd_2.png";
 import image3 from "../../../public/images/previews/gd_3.png";
 import image4 from "../../../public/images/previews/gd_4.png";
-import image5 from "../../../public/images/previews/gd_5.png";
-import image6 from "../../../public/images/previews/gd_6.png";
+import image5 from "../../../public/images/previews/gd_6.png";
+import image6 from "../../../public/images/previews/pd_6.png";
 import darkBg from "../../../public/images/dark-bg.jpg";
 
 export default function HighlightGD() {
@@ -32,17 +32,17 @@ export default function HighlightGD() {
             </a>
           </div>
           <div className="highlight-item">
-            <a href="./projects/dessert-first">
+            <a href="./projects/print_mockups">
               <img src={image4.src} />
             </a>
           </div>
           <div className="highlight-item">
-          <a href="./projects/astrophobia">
+          <a href="./projects/poster_bash">
               <img src={image5.src} />
             </a>
           </div>
           <div className="highlight-item">
-          <a href="./projects/lovecraft-posters">
+          <a href="./projects/component_creation">
               <img src={image6.src} />
             </a>
           </div>
