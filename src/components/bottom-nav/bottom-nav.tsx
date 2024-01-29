@@ -6,7 +6,7 @@ import { BottomNavigation, Button } from "@mui/material";
 
 export default function BottomNav() {
   return (
-    <>
+    <div className="bottom-nav-container">
       <BottomNavigation showLabels className="bottom-nav">
         <a href="../../">
           <Button startIcon={<PublicOutlined />} size="large" color="primary">Home</Button>
@@ -25,6 +25,6 @@ export default function BottomNav() {
           <Button startIcon={<SatelliteAltOutlined />} size="large" color="primary">Contact</Button>
         </a>
       </BottomNavigation>
-    </>
+    </div>
   );
 }
