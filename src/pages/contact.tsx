@@ -32,7 +32,7 @@ export default function Contact() {
               In order to ensure efficient communication, please include as much information as possible about your inquiry and/or requests and I'll be sure to be in contact regarding projects.
             </p>
             <Tooltip title="Email: corvinedesignx@gmail.com" placement="top">
-              <a href="mailto:corvinedesignx@gmail.com">
+              <a href="mailto:lunarnaut.co@gmail.com">
                 <Button size="large" variant="outlined" color="primary" startIcon={<MailOutlined />} className="contact-cta">
                   Contact me
                 </Button>
