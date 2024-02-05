@@ -43,7 +43,7 @@ export default function HighlightPD() {
           </div>
         </div>
         <p className="highlight-content">I've designed and built several differing styles of websites, apps, projects and more.</p>
-        <a href="/projects">
+        <a href="/projects/tags/productdesign">
           <Button variant="outlined" size="large" color="secondary" endIcon={<ArrowForward />} className="highlight-cta">See more</Button>
         </a>
       </div>

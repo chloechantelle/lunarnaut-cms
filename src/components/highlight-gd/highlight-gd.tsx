@@ -50,7 +50,7 @@ export default function HighlightGD() {
         <p className="highlight-content">
           I've designed and created several differing styles of advertisements, animations, Illustrations and more.
         </p>
-        <a href="/projects">
+        <a href="/projects/tags/graphicdesign">
           <Button variant="outlined" size="large" color="primary" endIcon={<ArrowForward />} className="highlight-cta">See more</Button>
         </a>
       </div>
